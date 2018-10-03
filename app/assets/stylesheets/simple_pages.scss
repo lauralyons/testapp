@@ -1,18 +1,32 @@
-
+body, html{
+  margin: 0;
+  padding: 0;
+}
 h1 {
-  margin-top: .5em;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   text-align: center;
+  padding-top: 2em;
 }
 h2 {
   text-align: center;
 }
+.navbar{
+  position:fixed;
+  width:100%;
+  z-index:10;
+  border-radius:0;
+  border-color:transparent;
+}
 my-image{
   width: 100%;
 }
-footer {
+.center_p {
   text-align: center;
+}
+.d-block {
+  max-height: 600px;
+  padding-top: 2em;
 }
 .carousel-caption {
   color:black;
@@ -24,7 +38,9 @@ footer {
   background-color: #999;
   background-color: rgba(70,70,70,.25);
 }
-
 .carousel-indicators .active {
   background-color: #444;
+}
+footer {
+  text-align: center;
 }
