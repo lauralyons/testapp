@@ -5,10 +5,12 @@ th, td {
     padding: 15px;
     text-align: left;
 }
-#order_show {
-  padding-top: 5em;
+#order_show h2 {
+  margin-top: 50px;
+}
+#order_show ul{
   border: 1px solid #ccc;
-  padding-top: 5em;
   margin: 0 auto;
   width: 50%;
+  padding: 3em;
 }
