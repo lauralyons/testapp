@@ -25,6 +25,12 @@
           <%= link_to "contact", simple_pages_contact_path, class: "nav-link" %>
         </li>
       </ul>
+      <div class="input-group container h-100 align-items-center">
+        <%= form_with(url: products_path, method: 'get', class: "form-inline ml-auto", local: true) do |form| %>
+          <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control mr-sm-2" %>
+          <%= form.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0" %>
+        <% end %>
+      </div>
     </nav>
     <%= yield %>
     <footer>
