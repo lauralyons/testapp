@@ -11,6 +11,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+config.action_mailer.preview_path = "#{Rails.root}/test/mailers/previews"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
