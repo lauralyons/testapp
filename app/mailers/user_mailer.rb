@@ -1,5 +1,6 @@
 class UserMailer < ApplicationMailer
   default from: "lauraslyons@gmail.com"
+  
   @name = params[:name]
   @email = params[:email]
   @message = params[:message]
