@@ -27,12 +27,8 @@
 }
 
 .alert {
-  float: right;
-  height: 30px;
-  line-height:30px;
-  padding:0px 15px;
-}
-
-.sign_up {
-  padding-right: 1em;
+  height: auto;
+  top: 0;
+  padding: 0px 15px;
+  margin: 0 auto;
 }
