@@ -21,6 +21,18 @@
    text-align: center;
    padding-top: 2em;
  }
+
 .container_outer {
   padding: 5px 10px;
+}
+
+.alert {
+  float: right;
+  height: 30px;
+  line-height:30px;
+  padding:0px 15px;
+}
+
+.sign_up {
+  padding-right: 1em;
 }
