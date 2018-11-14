@@ -1,34 +1,39 @@
 <p id="notice"><%= notice %></p>
+<section class="row product_show">
+	<div class="col-sm-6 img">
+		<%= image_tag(@product.image_url, class: "img-fluid") %>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <section class="col-sm-6">
+    <p>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+    <p>
+      <strong>Colour:</strong>
+      <%= @product.colour %>
+    </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+    <p>
+      <strong>Size:</strong>
+      <%= @product.size %>
+    </p>
 
-<p>
-  <strong>Size:</strong>
-  <%= @product.size %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+    <p>
+      <strong>Price:</strong>
+      <%= @product.price %>
+    </p>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </section> <!-- /col-sm-6 -->
+</section> <!-- /row product_show -->
+<section class="comments">
+  <%= @product.highest_rating_comment %>
+  <%= @product.lowest_rating_comment %>
+</section>
