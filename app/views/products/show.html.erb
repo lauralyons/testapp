@@ -45,6 +45,8 @@
 	<div class="comments">
 	  <%#= @product.highest_rating_comment %>
 	  <%#= @product.lowest_rating_comment %>
+		<% logger.debug "Comment: #{@product.highest_rating_comment}"%>
+
 		<%= render 'new_comment' %>
 	</div>
 	<div class ="col-lg-12 comment_block">
