@@ -36,8 +36,9 @@
 		<%= form.hidden_field :product_id, :value => @product.id %>
 		<%= render partial: "shared/stripe_checkout_button" %>
 		<% end %>
-
+		<% if signed_in? && current_user.admin? %>
     <%= link_to 'Edit', edit_product_path(@product) %> |
+		<% end %>
     <%= link_to 'Back', products_path %>
 
   </section> <!-- /col-sm-6 -->
@@ -45,7 +46,6 @@
 	<div class="comments">
 	  <%#= @product.highest_rating_comment %>
 	  <%#= @product.lowest_rating_comment %>
-		<% logger.debug "Comment: #{@product.highest_rating_comment}"%>
 
 		<%= render 'new_comment' %>
 	</div>

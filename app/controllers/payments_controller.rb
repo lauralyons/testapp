@@ -22,7 +22,6 @@ class PaymentsController < ApplicationController
           total: @product.price
         )
       end
-      byebug
     rescue Stripe::CardError => e
       # The card has been declined
     end
