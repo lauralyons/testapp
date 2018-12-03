@@ -1,13 +1,15 @@
-<div class="col-sm-4 product_index">
-  <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
-  <p><h3><%= link_to product.name, product %></h3></p>
-  <p><%= product.description %></p>
-  <p><%= product.colour %></p>
-  <p><%= product.size %></p>
-  <p><%= product.price %></p>
-  <% if signed_in? && current_user.admin? %>
-  <p><%= link_to 'Show', product %></p>
-  <p><%= link_to 'Edit', edit_product_path(product) %></p>
-  <p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  <% end %>
-</div><!-- /col -->
+<% cache product do %>
+  <div class="col-sm-4 product_index">
+    <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
+    <p><h3><%= link_to product.name, product %></h3></p>
+    <p><%= product.description %></p>
+    <p><%= product.colour %></p>
+    <p><%= product.size %></p>
+    <p><%= product.price %></p>
+    <% if signed_in? && current_user.admin? %>
+    <p><%= link_to 'Show', product %></p>
+    <p><%= link_to 'Edit', edit_product_path(product) %></p>
+    <p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+  </div><!-- /col -->
+<% end %>
