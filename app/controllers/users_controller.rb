@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user! 
+  before_action :authenticate_user!
   load_and_authorize_resource
   # GET /users
   # GET /users.json
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    $redis.set(@users, User.find(params[:id]))
   end
 
   # GET /users/1/edit

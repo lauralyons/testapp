@@ -26,4 +26,13 @@ class Product < ApplicationRecord
     comments.average(:rating).to_f
   end
 
+  def get_recent_views
+    $redis.get("product")
+  end
+
+  def set_recent_views
+    $redis.set("product", "product:#{id}")
+    get_recent_views
+  end
+
 end

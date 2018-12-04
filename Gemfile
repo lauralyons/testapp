@@ -80,3 +80,5 @@ gem 'rails-controller-testing'
 gem "brakeman"
 
 gem 'dalli'
+
+gem 'redis-rails'
