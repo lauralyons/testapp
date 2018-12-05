@@ -59,6 +59,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.cache_store = :redis_cache_store
-  
+
+  config.app_generators.javascript_engine = :javascript
+
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 end
