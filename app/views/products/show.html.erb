@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<section class="row product_show">
+<section class="row product_show" data-product-id="<%= @product.id %>">
 	<div class="col-sm-6 img">
 		<%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image:@product.image_url) %>
   </div>
