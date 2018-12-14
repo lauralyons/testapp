@@ -32,6 +32,9 @@ th, td {
 .comments {
  float: left;
 }
+#comment_body p{
+  margin-top: .5em;
+}
 .back_edit {
-  padding-right: .5em;
+  padding-top: 1em;
 }
